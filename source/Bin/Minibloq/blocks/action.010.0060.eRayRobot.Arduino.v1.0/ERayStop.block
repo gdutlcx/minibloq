@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block xmlns="http://block.namespaces.minibloq.org" xmlns:minibloq="http://minibloq.org" MinibloqVersion="0.8.Beta">
+	<properties>
+		<name>stop</name>
+		<function>Flow</function>
+		<loadAction>load</loadAction>
+	</properties>
+	<code>
+		<dataType>ERayMethod</dataType>
+		<initialCode>
+			<line0>stop();</line0> 
+		</initialCode>
+		<paramListStart></paramListStart>
+		<paramListEnd></paramListEnd>
+		<keywords0>stop</keywords0>
+	</code>
+	<interface>
+		<originalSize>
+			<width>operationDefaultWidth::</width>
+			<height>blockDefaultHeight::</height>
+		</originalSize>
+        	<childFactor>0.9</childFactor>
+        	<defaultBackgroundColour0>
+			<R>setterBlockColour0R::</R>
+			<G>setterBlockColour0G::</G>
+			<B>setterBlockColour0B::</B>
+		</defaultBackgroundColour0>
+        	<defaultBackgroundColour1>
+			<R>setterBlockColour1R::</R>
+			<G>setterBlockColour1G::</G>
+			<B>setterBlockColour1B::</B>
+		</defaultBackgroundColour1>
+		<picker>
+			<imagesBasePath>thisBlockPath::</imagesBasePath>
+			<default>Images/StopPickerDefault.png</default>
+			<hover>Images/StopPickerHover.png</hover>
+			<pressed>Images/StopPickerPressed.png</pressed>
+			<disabled>Images/StopPickerDisabled.png</disabled>
+		</picker>
+		<blockButton>
+			<has>true</has>
+			<imagesBasePath>thisBlockPath::</imagesBasePath>
+			<default>Images/StopBlockDefault.png</default>
+			<disabled>Images/StopBlockDisabled.png</disabled>
+		</blockButton>
+	</interface>
+</block>

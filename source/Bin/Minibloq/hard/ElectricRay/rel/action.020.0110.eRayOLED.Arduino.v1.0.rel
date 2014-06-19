@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rel xmlns="http://rel.namespaces.minibloq.org" xmlns:minibloq="http://minibloq.org" MinibloqVersion="0.82.Beta">
+	<includePaths>
+		<include><s>libsPath::</s><s>/Arduino/SPI</s></include>
+		<include><s>libsPath::</s><s>/Arduino/Wire</s></include>
+		<include><s>libsPath::</s><s>/Arduino/Adafruit_GFX</s></include>
+		<include><s>libsPath::</s><s>/Arduino/Adafruit_SSD1306</s></include>
+	</includePaths>
+	<includeFiles>
+		<include><s>SPI.h</s></include>
+		<include><s>Wire.h</s></include>
+		<include><s>Adafruit_GFX.h</s></include>
+		<include><s>Adafruit_SSD1306.h</s></include>
+	</includeFiles>
+	<instancesHeader>
+		<s>extern Adafruit_SSD1306 display;</s>
+	</instancesHeader>
+	<instancesCode>
+		<s>Adafruit_SSD1306 display(9, 10, 11, 13, 12);</s>
+	</instancesCode>
+	<initBoardCode>
+		<s>	display.begin(SSD1306_SWITCHCAPVCC);&#10;</s>
+  		<s>	display.display();&#10;</s> 
+  		<s>	delay(1000);&#10;</s>  	
+	</initBoardCode>
+	<build>
+		<cmd>
+			<s>"</s><s>toolsPath::</s>
+			<s>/avr-g++" -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -MMD</s>
+			<s> -mmcu=</s><s>cpu::</s>
+			<s> -DF_CPU=</s><s>clockFreq::</s>
+			<s> -DARDUINO=</s><s>arduinoVersion::</s>
+			<s> -I"</s> <s>toolsPath::</s>
+			<s>" -I"</s><s>corePath::</s>
+			<s>" -I"</s><s>corePath::</s><s>/avr-libc</s>
+			<s>" -I"</s><s>corePath::</s><s>/variants/</s><s>arduinoVariant::</s>
+			<s>" -I"</s><s>componentPath::</s>
+			<s>" -I"</s><s>outputPath::</s><s>" </s>
+			<s>-I"</s><s>libsPath::</s><s>/Arduino/Adafruit_GFX" </s>
+			
+			<s>"</s><s>libsPath::</s><s>/Arduino/Adafruit_GFX/Adafruit_GFX.cpp" -o "</s><s>outputPath::</s><s>/Adafruit_GFX.cpp.o"</s>
+		</cmd>
+		<cmd>
+			<s>"</s><s>toolsPath::</s>
+			<s>/avr-g++" -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -MMD</s>
+			<s> -mmcu=</s><s>cpu::</s>
+			<s> -DF_CPU=</s><s>clockFreq::</s>
+			<s> -DARDUINO=</s><s>arduinoVersion::</s>
+			<s> -I"</s> <s>toolsPath::</s>
+			<s>" -I"</s><s>corePath::</s>
+			<s>" -I"</s><s>corePath::</s><s>/avr-libc</s>
+			<s>" -I"</s><s>corePath::</s><s>/variants/</s><s>arduinoVariant::</s>
+			<s>" -I"</s><s>componentPath::</s>
+			<s>" -I"</s><s>outputPath::</s><s>" </s>
+			<s> -I"</s><s>libsPath::</s><s>/Arduino/Adafruit_GFX" </s>
+			<s> -I"</s><s>libsPath::</s><s>/Arduino/SPI" </s>
+			<s> -I"</s><s>libsPath::</s><s>/Arduino/Wire" </s>
+			<s> -I"</s><s>libsPath::</s><s>/Arduino/Adafruit_SSD1306" </s>
+			
+			<s>"</s><s>libsPath::</s><s>/Arduino/Adafruit_SSD1306/Adafruit_SSD1306.cpp" -o "</s><s>outputPath::</s><s>/Adafruit_SSD1306.cpp.o"</s>
+		</cmd>
+		<cmd>
+			<s>"</s><s>toolsPath::</s>
+			<s>/avr-g++" -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -MMD</s>
+			<s> -mmcu=</s><s>cpu::</s>
+			<s> -DF_CPU=</s><s>clockFreq::</s>
+			<s> -DARDUINO=</s><s>arduinoVersion::</s>
+			<s> -I"</s> <s>toolsPath::</s>
+			<s>" -I"</s><s>corePath::</s>
+			<s>" -I"</s><s>corePath::</s><s>/avr-libc</s>
+			<s>" -I"</s><s>corePath::</s><s>/variants/</s><s>arduinoVariant::</s>
+			<s>" -I"</s><s>componentPath::</s>
+			<s>" -I"</s><s>outputPath::</s><s>" </s>
+			<s> -I"</s><s>libsPath::</s><s>/Arduino/Wire" </s>
+			
+			<s>"</s><s>libsPath::</s><s>/Arduino/Wire/Wire.cpp" -o "</s><s>outputPath::</s><s>/Wire.cpp.o"</s>
+		</cmd>
+		<cmd>
+			<s>"</s><s>toolsPath::</s>
+			<s>/avr-g++" -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -MMD</s>
+			<s> -mmcu=</s><s>cpu::</s>
+			<s> -DF_CPU=</s><s>clockFreq::</s>
+			<s> -DARDUINO=</s><s>arduinoVersion::</s>
+			<s> -I"</s> <s>toolsPath::</s>
+			<s>" -I"</s><s>corePath::</s>
+			<s>" -I"</s><s>corePath::</s><s>/avr-libc</s>
+			<s>" -I"</s><s>corePath::</s><s>/variants/</s><s>arduinoVariant::</s>
+			<s>" -I"</s><s>componentPath::</s>
+			<s>" -I"</s><s>outputPath::</s><s>" </s>
+			<s>-I"</s><s>libsPath::</s><s>/Arduino/SPI" </s>
+			
+			<s>"</s><s>libsPath::</s><s>/Arduino/SPI/SPI.cpp" -o "</s><s>outputPath::</s><s>/SPI.cpp.o"</s>
+		</cmd>
+		<cmd>
+			<s>"</s><s>toolsPath::</s>
+			<s>/avr-g++" -c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -MMD</s>
+			<s> -mmcu=</s><s>cpu::</s>
+			<s> -DF_CPU=</s><s>clockFreq::</s>
+			<s> -DARDUINO=</s><s>arduinoVersion::</s>
+			<s> -I"</s> <s>toolsPath::</s>
+			<s>" -I"</s><s>corePath::</s>
+			<s>" -I"</s><s>corePath::</s><s>/avr-libc</s>
+			<s>" -I"</s><s>corePath::</s><s>/variants/</s><s>arduinoVariant::</s>
+			<s>" -I"</s><s>componentPath::</s>
+			<s>" -I"</s><s>outputPath::</s><s>" </s>
+			<s>-I"</s><s>libsPath::</s><s>/Arduino/Wire" </s>
+			
+			<s>"</s><s>libsPath::</s><s>/Arduino/Wire/twi.c" -o "</s><s>outputPath::</s><s>/twi.c.o"</s>
+		</cmd>
+	</build>
+	
+</rel>

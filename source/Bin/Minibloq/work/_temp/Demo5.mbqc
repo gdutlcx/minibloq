@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mbqc xmlns="http://mbqc.namespaces.minibloq.org" xmlns:minibloq="http://minibloq.org" MinibloqVersion="0.82.Beta">
+    <files/>
+    <properties>
+        <canvas visible="true"/>
+        <blocks count="14"/>
+    </properties>
+    <variables/>
+    <blocks>
+        <ComponentStart function="Flow" commented="false" instanceName="initBoard" paramsCount="0" hasAddParamsButton="false" loadAction="noLoad"/>
+        <while function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <boolConstantTrue function="Constant" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </while>
+        <if function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberLowerThan function="Operation" commented="false" paramsCount="2" hasAddParamsButton="false" loadAction="load">
+                <ObstacleDetector function="Getter" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+                <numberConstant function="Constant" commented="false" constantValue="20" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </numberLowerThan>
+        </if>
+        <oled function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <textLCDNumber function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <ObstacleDetector function="Getter" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </textLCDNumber>
+        </oled>
+        <eRay function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <ERayStop function="Setter" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </eRay>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="1000" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
+        <eRay function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <ERayMoveBackward function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <numberConstant function="Constant" commented="false" constantValue="50" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </ERayMoveBackward>
+        </eRay>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="1000" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
+        <else function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <oled function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <textLCDNumber function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <ObstacleDetector function="Getter" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </textLCDNumber>
+        </oled>
+        <eRay function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <ERayMoveForward function="Setter" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+                <numberConstant function="Constant" commented="false" constantValue="50" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+            </ERayMoveForward>
+        </eRay>
+        <delay function="Flow" commented="false" paramsCount="1" hasAddParamsButton="false" loadAction="load">
+            <numberConstant function="Constant" commented="false" constantValue="1000" paramsCount="0" hasAddParamsButton="false" loadAction="load"/>
+        </delay>
+        <endIf function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+        <whileEnd function="Flow" commented="false" paramsCount="0" hasAddParamsButton="false" loadAction="brother"/>
+    </blocks>
+</mbqc>
