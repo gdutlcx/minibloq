@@ -116,7 +116,6 @@ ln -sf ../../../bin/avr-nm ../../avrlinux/amd64/v1.0/lib/avr/bin/nm
 echo set_execute_permission
 
 }
-
 set_execute_permission
 
 if [ "${OS}" = "Linux" ] ; then
